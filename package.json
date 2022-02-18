@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "puckwudgie-team-b",
-=======
   "name": "puckwudgie-team-project",
->>>>>>> main
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/nickbanders/Puckwudgie-Team-B.git"
   },
-<<<<<<< HEAD
-=======
   "keywords": [],
->>>>>>> main
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -31,10 +24,7 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
-<<<<<<< HEAD
-=======
     "mysql": "^2.18.1",
->>>>>>> main
     "mysql2": "^2.3.3",
     "sequelize": "^6.16.1"
   }
