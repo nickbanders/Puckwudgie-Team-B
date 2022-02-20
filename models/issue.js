@@ -49,13 +49,13 @@ Issue.init(
         key: "id",
       },
     },
-    subcomment: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "subcomment",
-        key: "id",
-      },
-    },
+    // subcomment: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "subcomment",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,

@@ -58,14 +58,14 @@ Comment.init(
         len: [1],
       },
     },
-    subcomment_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "subcomment",
-        key: "id",
-      },
-    },
+    // subcomment_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "subcomment",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
