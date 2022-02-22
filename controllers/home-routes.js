@@ -8,12 +8,12 @@ router.get("/", (req, res) => {
   Issue.findAll({
     attributes: [
       "id",
-      //"post_url",
-      //"title",
+      // "post_url",
+      // "title",
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.issue_id)"
+          "(SELECT COUNT(*) FROM vote WHERE issue.id = vote.issue_id)"
         ),
         "vote_count",
       ],
@@ -55,8 +55,8 @@ router.get("/post/:id", (req, res) => {
     },
     attributes: [
       "id",
-      //"post_url",
-      //"title",
+      // "post_url",
+      // "title",
       "created_at",
       [
         sequelize.literal(
@@ -106,6 +106,10 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 module.exports = router;
