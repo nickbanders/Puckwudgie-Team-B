@@ -37,7 +37,7 @@ router.get("/:id", (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
+      // "post_url",
       "title",
       "created_at",
       [
@@ -78,7 +78,7 @@ router.get("/:id", (req, res) => {
 router.post("/", withAuth, (req, res) => {
   Issue.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    // post_url: req.body.post_url,
     user_id: req.session.user_id,
   })
     .then((dbIssueData) => res.json(dbIssueData))
