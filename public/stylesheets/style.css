@@ -28,6 +28,10 @@ header {
   top: 10px;
 }
 
+.post_text {
+  white-space: pre-wrap;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
