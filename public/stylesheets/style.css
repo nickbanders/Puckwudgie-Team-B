@@ -42,6 +42,14 @@ header h4 {
   line-height: 5px;
 }
 
+h2 {
+  color: #fff;
+}
+
+h3 {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: #1ecbe1;
@@ -168,6 +176,11 @@ main {
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   color: #1e6ae1;
+}
+
+.meta {
+  /* padding: 5px; */
+  margin: 10 0 0 0px;
 }
 
 .comment .meta {

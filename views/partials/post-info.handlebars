@@ -7,8 +7,8 @@
     by
     <b>{{user.username}}</b>
     on
-    {{format_date created_at}}
-    <a href="/post/{{id}}">{{comments.length}}
-      {{format_plural "comment" comments.length}}</a>
+    {{format_date created_at}}<br />
+    <div class="meta"><a href="/post/{{id}}">{{comments.length}}
+        {{format_plural "comment" comments.length}}</a></div>
   </div>
 </article>
