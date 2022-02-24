@@ -12,6 +12,8 @@ body {
   align-items: flex-start;
   justify-content: center;
   background: linear-gradient(to top left, #1ecbe1, #e11ecb);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
@@ -23,6 +25,7 @@ header {
   padding: 0 1%;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
+  top: 10px;
 }
 
 .sticky {
