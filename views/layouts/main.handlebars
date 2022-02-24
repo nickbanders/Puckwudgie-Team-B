@@ -3,37 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[code] BLUEs</title>
+    <title>[code]blue</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
   <body>
     <div class="wrapper">
       <header>
+        <span><h1>
+            <a href="/"><img src="/assets/logo.png" height="40px" /></a>
+          </h1>
+        </span>
         <nav>
-          <ul>
-            <li class="home"><a href="/">[code] BLUEs</a></li>
-            <li class="nav"><a href="/dashboard">Dashboard</a></li>
-            <li><a href="signup">signup</a></li>
-            {{#if loggedIn}}
-              <li class="nav"><button id="logout">logout</button></li>
-            {{else}}
-              <li class="nav"><a href="/login">Login</a></li>
-            {{/if}}
-          </ul>
+          {{#if loggedIn}}
+            <a href="/dashboard">dashboard</a>
+            <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+            <a href="/login">login</a>
+            <a href="/signup">signup</a>
+          {{/if}}
         </nav>
       </header>
       <main>
         {{{body}}}
       </main>
-      <footer>
-        <p>Come Again Friend!</p>
-      </footer>
     </div>
+
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
-
   </body>
 
 </html>
