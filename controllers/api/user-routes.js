@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Comment, Vote, Issue } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 const nodemailer = require("nodemailer");
 
 async function main(email, username) {
@@ -35,8 +35,6 @@ async function main(email, username) {
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
-
-
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
@@ -57,8 +55,8 @@ router.get("/:id", (req, res) => {
     },
     include: [
       {
-        model: Issue,
-        attributes: ["id", "title", "created_at"],
+        model: Post,
+        attributes: ["id", "title", "post_text", "created_at"],
       },
       {
         model: Comment,
@@ -67,12 +65,6 @@ router.get("/:id", (req, res) => {
           model: Post,
           attributes: ["title"],
         },
-      },
-      {
-        model: Post,
-        attributes: ["title"],
-        through: Vote,
-        as: "voted_posts",
       },
     ],
   })
@@ -152,6 +144,7 @@ router.post("/logout", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
+  // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
