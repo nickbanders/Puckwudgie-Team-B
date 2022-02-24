@@ -2,13 +2,35 @@
   box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
+body {
   font-family: sans-serif;
   color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to top left, #1ecbe1, #e11ecb);
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+header h1 {
+  font-size: 28px;
+  line-height: 5px;
+}
+header h4 {
+  font-size: 12px;
+  line-height: 5px;
 }
 
 a {
@@ -23,7 +45,7 @@ a:hover {
 }
 
 button {
-  background-color: #225ca3;
+  background-color: #1ecbe1;
   border: 0;
   padding: 1%;
   color: white;
@@ -34,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: #1ee196;
 }
 
 .post-list {
@@ -75,23 +97,6 @@ form label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-header {
-  background-color: #cccccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
-}
-
-header h1 {
-  font-size: 28px;
-  line-height: 5px;
-}
-header h4 {
-  font-size: 12px;
-  line-height: 5px;
 }
 
 main {
