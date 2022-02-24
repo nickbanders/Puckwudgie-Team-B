@@ -16,12 +16,18 @@ body {
 
 header {
   background-color: #fff;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 header h1 {
@@ -35,13 +41,13 @@ header h4 {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #1ecbe1;
   font-weight: bold;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: #1ee196;
 }
 
 button {
@@ -63,6 +69,24 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+
+.post {
+  line-height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* display: flex; */
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+/* .post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #7d7d7d;
+} */
 
 textarea,
 input {
@@ -93,7 +117,7 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  /* max-width: 1200px; */
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -101,25 +125,7 @@ form label {
 
 main {
   flex: 1;
-  padding: 2% 4%;
-}
-
-.btn-no-style {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color 0.1s;
-  margin-left: 16px;
-}
-
-.btn-no-style:hover {
-  background: none;
-  color: #3486eb;
+  padding: 5% 20% 20%;
 }
 
 .delete-post-btn {
@@ -128,17 +134,6 @@ main {
 
 .delete-post-btn:hover {
   background-color: #ff643d;
-}
-
-.post {
-  margin-bottom: 2%;
-  line-height: 150%;
-}
-
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
 }
 
 .edit-link {
@@ -151,12 +146,15 @@ main {
 }
 
 .comment {
+  color: #fff;
   padding: 1%;
   margin-bottom: 1%;
 }
 
 .comment:nth-child(odd) {
   background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  color: #1e6ae1;
 }
 
 .comment .meta {
@@ -181,4 +179,52 @@ main {
 
 li {
   list-style-type: none;
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }

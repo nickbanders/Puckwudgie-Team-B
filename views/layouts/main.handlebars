@@ -2,6 +2,7 @@
 
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[code]blue</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -9,15 +10,15 @@
 
   <body>
     <div class="wrapper">
-      <header>
+      <header class="sticky">
         <span><h1>
             <a href="/"><img src="/assets/logo.png" height="40px" /></a>
           </h1>
         </span>
         <nav>
           {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
+            <a href="/dashboard" class="">dashboard</a>
+            <a href="/dashboard" id="logout">logout</a>
           {{else}}
             <a href="/login">login</a>
             <a href="/signup">signup</a>
