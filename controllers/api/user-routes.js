@@ -23,7 +23,7 @@ async function main(email, username) {
     from: '"[Code] Blues " <noreply@codeblues.com>', // sender address
     to: email, // list of receivers
     subject: "Thanks for joining us @ [Code] Blue", // Subject line
-    text: "Thank you for joining in to our community", // plain text body
+    text: "Thank you ${username} for joining in to our community", // plain text body
     html: "<b>Thank you for joining in to our community</b>", // html body
   });
 
