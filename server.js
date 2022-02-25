@@ -22,7 +22,7 @@ const sess = {
 app.use(session(sess));
 
 const helpers = require("./utils/helpers");
-const { truncate } = require("./models/Comment");
+const { truncate } = require("./models/comment1");
 
 const hbs = exphbs.create({ helpers });
 
