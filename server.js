@@ -22,7 +22,7 @@ const sess = {
 app.use(session(sess));
 
 const helpers = require("./utils/helpers");
-const { truncate } = require("./models/Comment");
+const { truncate } = require("./models/comment1");
 
 const hbs = exphbs.create({ helpers });
 
@@ -37,6 +37,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // turn on connection to db and server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
