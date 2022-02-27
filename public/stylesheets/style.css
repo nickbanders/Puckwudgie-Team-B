@@ -195,10 +195,14 @@ main {
   width: 500px;
 }
 
-.new-post-text {
+/* .new-post-text {
   width: 500px;
   height: 300px;
   word-wrap: break-word;
+} */
+
+.break {
+  white-space: pre-wrap;
 }
 
 .edit-post-form {
