@@ -23,7 +23,7 @@ Next it the link of the website deployed in heroku
 https://puckwudgie-code-blue.herokuapp.com/
 
 
-![Tech-blog](./mockup.jpg)
+![code-blues](./mockup.jpg)
 
 
 
